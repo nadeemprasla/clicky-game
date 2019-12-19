@@ -2,21 +2,21 @@ import React from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-const NavBar = () => {
+const NavBar = ({ score, topScore, status }) => {
 
     return (
         <Row className="nav-bar">
 
             <Col className="title">
-                <h2>Clicky Game</h2>
+                <a href="/">Clicky Game</a>
             </Col>
 
             <Col>
-                <h2>You have guessed Correctly!</h2>
+                {status || "Click on any character to start"}
             </Col>
 
             <Col>
-                <h2>Score: 0 | Top Score: 0</h2>
+                Score: {score || 0} | Top Score: {topScore || 0}
             </Col>
         </Row>
     )

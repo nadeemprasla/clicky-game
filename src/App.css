@@ -27,6 +27,7 @@
     justify-content: space-around;
     align-content: flex-start;
     overflow: auto;
+    margin: 0 25%;
 }      
 
 
@@ -36,7 +37,6 @@
 .nav-bar {
     z-index: 1000;
     height: 10vh;
-    padding: 2vh;
     margin: auto;
     text-align: center;
     background-color: rgb(99, 14, 168);
@@ -45,6 +45,30 @@
     position: sticky;
     top: 0;
 }
+.nav-bar .col {
+    font-size: 20px;
+    padding: 1rem;
+}
 .title {
     text-align: left;
+}
+.card {
+    background: #fff;
+  border-radius: 2px;
+  height: 325px;
+  margin: 1rem;
+  position: relative;
+  width: 325px;
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  text-align: left;
+  cursor: pointer;
+    }
+.card img{
+    height: 80%;
+    overflow: hidden;
+}
+
+.card-body {
+    padding: 0 0;
+    text-align: center;
 }
