@@ -63,7 +63,9 @@ class App extends Component {
             }
             return entry
         })
-        this.setState({ data: dataNew })
+        this.shuffle(dataNew,(dataPassed)=>{
+            this.setState({ data: dataPassed })
+        })
     }
 
     reset = (obj) => {
@@ -87,7 +89,18 @@ class App extends Component {
         }
     }
 
+    shuffle = (recData, cb) => {
+        let data = recData
+        let dataNew = [];
+        while (12 !== dataNew.length) {
+            let randoIndex = Math.floor(Math.random() * data.length)
+            dataNew.push(data[randoIndex])
+            data.splice(randoIndex, 1)
+        }
+        cb(dataNew)
 
+
+    }
 
 
     render() {
